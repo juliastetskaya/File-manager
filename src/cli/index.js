@@ -23,8 +23,10 @@ rl.on('line', async (input) => {
         return;
     }
 
-    const operation = operations[input];
-    await operation();
+    const [operation, ...args] = input.split(' ');
+
+    const handler = operations[operation];
+    await handler(...args);
     console.log(`You are currently in ${cwd()}`);
 });
 
