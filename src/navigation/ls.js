@@ -9,7 +9,7 @@ export const ls = async () => {
         } else {
             console.log('Directory is empty');
         }
-    } catch (error) {
-        console.error(error);
+    } catch {
+        throw new Error('FS operation failed!');
     }
 };
