@@ -17,14 +17,14 @@ const rl = createInterface({
 console.log(`Welcome to the File Manager, ${userName}!`);
 console.log(`You are currently in ${cwd()}`);
 
-rl.on('line', (input) => {
+rl.on('line', async (input) => {
     if (input.trim() === '.exit') {
         rl.close();
         return;
     }
 
     const operation = operations[input];
-    operation();
+    await operation();
     console.log(`You are currently in ${cwd()}`);
 });
 
