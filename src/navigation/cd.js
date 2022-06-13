@@ -1,8 +1,10 @@
 import { chdir } from 'process';
 
-export const cd = (pathDir) => {
+import { getAbsolutePath } from '../utils/index.js';
+
+export const cd = (pathToDir) => {
     try {
-        chdir(getAbsolutePath(pathDir));
+        chdir(getAbsolutePath(pathToDir));
     } catch {
         throw new Error('FS operation failed!');
     }

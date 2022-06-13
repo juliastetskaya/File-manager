@@ -9,5 +9,5 @@ export const getPathFromUrl = (url) => {
     return { __filename, __dirname };
 };
 
-export const getAbsolutePath = (pathDir) =>
-    isAbsolute(pathDir) ? pathDir : join(cwd(), pathDir);
+export const getAbsolutePath = (pathToDir) =>
+    isAbsolute(pathToDir) ? pathToDir : join(cwd(), pathToDir);
