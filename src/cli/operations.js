@@ -4,6 +4,7 @@ import { cd } from '../navigation/cd.js';
 import { cat } from '../file/cat.js';
 import { add } from '../file/add.js';
 import { rn } from '../file/rn.js';
+import { cp } from '../file/cp.js';
 
 export const operations = {
     up,
@@ -12,4 +13,5 @@ export const operations = {
     cat,
     add,
     rn,
+    cp,
 };
